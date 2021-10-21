@@ -10,7 +10,7 @@ class SheinSpider(scrapy.Spider):
     # start_urls = ['http://shein.com.hk/Women-Bikini-Sets-c-1866.html?page=1']
 
     def start_requests(self):
-        for i in range(1,2):
+        for i in range(1,41):
             yield Request(url='http://shein.com.hk/Women-Bikini-Sets-c-1866.html?page=%d'% i,callback=self.parse_goodsurl)
             # yield Request(url='https://www.shein.com.hk/3pack-Ring-Linked-Bikini-Swimsuit-Beach-Skirt-p-3418501-cat-1866.html',callback=self.parse_imgurls)
 
